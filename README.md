@@ -22,6 +22,25 @@ The Simple Binary to Text/Text to Binary converter (SBTTBC) is a program made in
    - Check if the input it 8 characters or more (because binary text is at the very least 8 characters of 0s and 1s. Don't worry, we will check if the numbers are actually 0s or 1s with the RE module later on)
    - Check if the input even exists. (It could be empty.)
 3. After we check those 2 things, we will finally use the RE module and store the `list` that matches the pattern in a variable. (Or overwriting the original input.)
-   - I recommend putting it in a variable. If 
-## Another useful tool I used in this
-- [Regex 101](https://regex101.com/) <--- a useful website for checking regular expressions in all progamming languages
+   - I recommend using Regex for this step. If you don't even what's a regular expression. see [this](https://www.w3schools.com/python/python_regex.asp).
+4. we then turn the list into a string by mashing all list items together in order to convert it to normal text.
+5. We turn the binary into *integers* then *bytes* then *`decode()`* them
+6. `print()` the result
+7. The other condition is much easier. Grab the input first.
+8. then we will loop through every single _character_
+   - Converting the character into ASCII code using `ord()`
+   - Then Convert the ASCII code into binary using `format()`
+   - Finally, `join()` the final conversions together with a space between each one.
+9. Now if the input isn't either binary-to-text or text-to-binary, we will `print()` some stuff before it loops back to the start.
+10. Optional: Make some decoration.
+11. The settings is just a matter of what you want to be a setting and changing all the relative things to it in the code according to the variable you will set.
+
+### Last words
+This was fun and frustrating to do (the conversions were hell to understand, I still need to understand the functions more). I might do more converters in the near future (Ceasar ciphers maybe). but for my 1st github repo I give this a solid 10/10. It's bite-sized, simple, has some intermediate coding parts and it has no errors (hopefully, I tested it a lot)
+
+### Specials Thanks to
+- Me (obviously)
+- [W3Schools](https://www.w3schools.com) for the RE module explanations
+- [GeeksForGeeks](https://www.geeksforgeeks.org) for the explanation of conversions
+- [Regex 101](https://regex101.com/) for testing the regular expression before putting them in my code.
+- Jupyter notebooks for quickly testing the conversersions to understand them better
